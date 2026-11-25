@@ -12,6 +12,8 @@ aparte.
 public/                  Recursos estáticos
 src/
 ├── components/          Componentes React reutilizables
+│   ├── catalogue/       Formulario, lista y fila de producto
+│   └── ui/              Campos y botón compartidos
 ├── layouts/             Estructura compartida de páginas Astro
 ├── lib/
 │   ├── images/          Lectura y validación de imágenes
@@ -31,6 +33,12 @@ recargar la página.
 La interfaz usa utilidades Tailwind CSS v4 para el diseño responsive: paneles
 en columnas desde 801 px y apilados en pantallas menores, con campos y filas
 compactos en móvil.
+
+Los componentes React separan la coordinación del catálogo (`CatalogueBuilder`),
+el borrador del producto (`ProductForm`), la colección y cada fila
+(`ProductList` y `ProductListItem`). `InputField`, `TextAreaField` e `ImageField`
+encapsulan controles con necesidades distintas; `Button` comparte solo variantes
+de estilo y comportamiento comunes.
 
 La transformación está separada de la interfaz:
 
