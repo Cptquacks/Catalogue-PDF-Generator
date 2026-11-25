@@ -1,0 +1,17 @@
+---
+import CatalogueBuilder from '../components/CatalogueBuilder';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Catálogo — crea y exporta tu PDF">
+	<main class="page-shell">
+		<header class="hero">
+			<p class="eyebrow">CATÁLOGO A TU MEDIDA</p>
+			<h1>Presenta tus productos<br />con claridad.</h1>
+			<p class="hero-description">
+				Agrega tus productos y crea un catálogo PDF limpio, listo para compartir.
+			</p>
+		</header>
+		<CatalogueBuilder client:load />
+	</main>
+</BaseLayout>
