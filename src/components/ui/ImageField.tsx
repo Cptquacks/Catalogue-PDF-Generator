@@ -7,7 +7,7 @@ export default function ImageField({ resetKey, onChange }: ImageFieldProps) {
 	return (
 		<label className="mb-[18px] grid gap-2 text-[13px] font-semibold text-[#26352d]">
 			<span>
-				Imagen <span className="text-[11px] font-normal text-[#849087]">(opcional)</span>
+				Imagen
 			</span>
 			<input
 				key={resetKey}
@@ -17,7 +17,7 @@ export default function ImageField({ resetKey, onChange }: ImageFieldProps) {
 				onChange={(event) => onChange(event.target.files?.[0] ?? null)}
 				type="file"
 			/>
-			<small className="text-[11px] font-normal text-[#849087]">JPG o PNG, hasta 5 MB.</small>
+			<small className="text-[11px] text-right font-normal text-[#849087]">JPG o PNG, hasta 5 MB.</small>
 		</label>
 	);
 }

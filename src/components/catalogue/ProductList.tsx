@@ -26,16 +26,13 @@ export default function ProductList({
 
 	return (
 		<section
-			className="rounded-[18px] border border-[#e4eae5] bg-white p-7 shadow-[0_12px_40px_rgb(34_54_43_/_5%)] max-[460px]:p-5.25"
+			className="flex flex-col items-center gap-3 rounded-[18px] border border-[#e4eae5] bg-white p-7 shadow-[0_12px_40px_rgb(34_54_43_/_5%)] max-[460px]:p-5.25"
 			aria-labelledby="product-list-title"
 		>
-			<div className="mb-[18px] flex items-center justify-between">
+			<div className="w-full flex items-center justify-between">
 				<div>
-					<p className="mb-[7px] text-[11px] font-bold tracking-[0.14em] text-[#4c8065]">
-						TU CATÁLOGO
-					</p>
 					<h2
-						className="m-0 text-[17px] font-semibold tracking-[-0.02em]"
+						className="text-[17px] font-semibold tracking-[-0.02em]"
 						id="product-list-title"
 					>
 						Productos
@@ -47,11 +44,11 @@ export default function ProductList({
 			</div>
 
 			{products.length === 0 ? (
-				<p className="m-0 rounded-xl border border-dashed border-[#dfe6e0] px-3.5 py-[27px] text-center text-[13px] text-[#829087]">
+				<p className="w-full m-0 rounded-xl border border-dashed border-[#dfe6e0] px-3.5 py-[27px] text-center text-[13px] text-[#829087]">
 					Los productos que agregues aparecerán aquí.
 				</p>
 			) : (
-				<ul className="m-0 grid list-none p-0" aria-label="Productos agregados">
+				<ul className="w-full m-0 grid list-none p-0" aria-label="Productos agregados">
 					{products.map((product) => (
 						<ProductListItem
 							formattedPrice={
@@ -84,8 +81,8 @@ export default function ProductList({
 				<ArrowDownTrayIcon aria-hidden="true" className="size-[17px]" />
 				{isExporting ? 'Generando PDF…' : 'Descargar catálogo PDF'}
 			</Button>
-			<p className="mt-3 mb-0 text-center text-[10px] leading-normal text-[#8a958d]">
-				El PDF se genera en tu navegador; tus datos no se envían a un servidor.
+			<p className="text-center text-[10px] leading-normal text-[#8a958d]">
+				El PDF se genera en tu navegador, tus datos no se envían a un servidor.
 			</p>
 		</section>
 	);

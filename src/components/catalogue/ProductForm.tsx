@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { PlusIcon } from '@heroicons/react/24/outline';
+import { BanknotesIcon, PlusIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 import { isSupportedCurrency } from '../../lib/currency';
 import { readImageFile } from '../../lib/images/read-image-file';
 import type { CatalogueProduct } from '../../types/catalogue';
@@ -80,7 +80,7 @@ export default function ProductForm({
 			<section className="p-7 max-[460px]:p-5.25" aria-labelledby="catalogue-settings-title">
 				<div className="mb-6 flex items-center gap-3.5">
 					<span className="grid size-9 shrink-0 place-items-center rounded-[11px] bg-[#edf4ef] text-[11px] font-bold text-[#4c8065]">
-						01
+						<BanknotesIcon aria-hidden="true" className="size-6.25" />
 					</span>
 					<div>
 						<h2
@@ -106,7 +106,7 @@ export default function ProductForm({
 						setError('');
 					}}
 					pattern="[A-Za-z]{3}"
-					placeholder="EUR"
+					placeholder="Ej. CUP"
 					required
 					title="Escribe un código de moneda de tres letras, por ejemplo EUR o USD."
 					value={currency}
@@ -119,7 +119,7 @@ export default function ProductForm({
 			>
 				<div className="mb-6 flex items-center gap-3.5">
 					<span className="grid size-9 shrink-0 place-items-center rounded-[11px] bg-[#edf4ef] text-[11px] font-bold text-[#4c8065]">
-						02
+						<ShoppingBagIcon aria-hidden="true" className="size-6.25" />
 					</span>
 					<div>
 						<h2
@@ -181,11 +181,13 @@ export default function ProductForm({
 						{error}
 					</p>
 				)}
-
+	
+				<div className='flex flex-row items-center w-full justify-end'>
 				<Button variant="secondary" type="submit">
 					<PlusIcon aria-hidden="true" className="size-[17px]" />
 					Agregar producto
 				</Button>
+				</div>
 			</section>
 		</form>
 	);

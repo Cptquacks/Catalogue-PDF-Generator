@@ -1,19 +1,21 @@
 ---
-import CatalogueBuilder from '../components/CatalogueBuilder';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import CatalogueBuilder from "../components/CatalogueBuilder";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Catálogo — crea y exporta tu PDF">
-	<main class="mx-auto w-[min(1120px,calc(100%-48px))] py-[72px] pb-[88px] max-md:w-[min(620px,calc(100%-32px))] max-md:pt-12 max-[460px]:w-[calc(100%-24px)] max-[460px]:pt-9">
-		<header class="mb-[42px] max-w-[680px]">
-			<p class="mb-[14px] text-[11px] font-bold tracking-[0.14em] text-[#4c8065]">CATÁLOGO A TU MEDIDA</p>
-			<h1 class="m-0 text-[clamp(38px,6vw,62px)] leading-[1.08] font-semibold tracking-[-0.055em]">
-				Presenta tus productos<br />con claridad.
-			</h1>
-			<p class="mt-[18px] max-w-[490px] text-base leading-[1.65] text-[#69766f]">
-				Agrega tus productos y crea un catálogo PDF limpio, listo para compartir.
-			</p>
-		</header>
-		<CatalogueBuilder client:load />
-	</main>
+  <main class="mx-auto w-[min(1120px,calc(100%-48px))] py-[72px] pb-[88px] max-md:w-[min(620px,calc(100%-32px))] max-md:pt-12 max-[460px]:w-[calc(100%-24px)] max-[460px]:pt-9">
+    <header class="mb-[42px] max-w-[680px]">
+      <h1 class="m-0 text-[clamp(38px,6vw,62px)] leading-[1.08] font-semibold tracking-[-0.055em]">
+        Presenta tus productos
+        <br />
+        con claridad.
+      </h1>
+      <p class="mt-[18px] max-w-[490px] text-base leading-[1.65] text-[#69766f]">
+        Agrega tus productos y crea un catálogo PDF limpio, listo para
+        compartir.
+      </p>
+    </header>
+    <CatalogueBuilder client:load />
+  </main>
 </BaseLayout>
