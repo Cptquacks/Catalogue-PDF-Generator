@@ -2,8 +2,9 @@
 
 Proyecto mínimo con Astro, React, TypeScript y Heroicons.
 
-Astro usa Vite para el servidor de desarrollo y la compilación, por lo que no
-hace falta instalar Vite aparte: sus opciones se configuran en `astro.config.mjs`.
+Astro usa Vite para el servidor de desarrollo y la compilación. Tailwind CSS v4
+está integrado mediante su plugin oficial de Vite; no hace falta instalar Vite
+aparte.
 
 ## Estructura
 
@@ -16,7 +17,7 @@ src/
 │   ├── images/          Lectura y validación de imágenes
 │   └── pdf/             Documento y exportación PDF
 ├── pages/               Rutas de la aplicación
-├── styles/              Estilos globales
+├── styles/              Tailwind y estilos base
 └── types/               Modelos de catálogo y tipos de terceros
 ```
 
@@ -26,6 +27,10 @@ cada producto requiere nombre y precio. La moneda es un código ISO 4217
 obligatorio (por ejemplo, EUR o USD). La imagen (JPG/PNG de hasta 5 MB) y la
 descripción son opcionales. Los datos no se envían a un servidor ni persisten al
 recargar la página.
+
+La interfaz usa utilidades Tailwind CSS v4 para el diseño responsive: paneles
+en columnas desde 801 px y apilados en pantallas menores, con campos y filas
+compactos en móvil.
 
 La transformación está separada de la interfaz:
 
@@ -53,6 +58,7 @@ dependencias, usa `npm install --prefer-offline --verbose`.
 
 - [Instalar Astro](https://docs.astro.build/en/install-and-setup/)
 - [Integración React de Astro](https://docs.astro.build/en/guides/integrations-guide/react/)
+- [Tailwind CSS con Astro](https://tailwindcss.com/docs/installation/framework-guides/astro)
 - [Heroicons para React](https://github.com/tailwindlabs/heroicons#react)
 - [pdfmake: uso en el navegador](https://pdfmake.github.io/docs/0.3/getting-started/client-side/)
 - [pdfmake: definición del documento](https://pdfmake.github.io/docs/0.3/document-definition-object/)
